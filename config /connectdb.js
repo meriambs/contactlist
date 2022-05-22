@@ -7,7 +7,7 @@ const connectddb=async()=>{
         //y3ref data win mwjouda bil atlas kifkif 
         //link like this dont forget it 
         //
-await mongoose.connect("mongodb://127.0.0.1:27017")
+await mongoose.connect(process.env.MONGO_URI)
 console.log('db is connected')
     }catch(err){
 console.log(err)
