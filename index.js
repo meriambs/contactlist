@@ -4,7 +4,7 @@ const ContactRouter = require("./routes/contact")
 
 const app = express()
 
-const port = 5000
+const port = process.env.port
 
 const connectddb = require('./config /connectdb')
 
@@ -21,3 +21,4 @@ app.use('/api/user',ContactRouter)
 app.listen(process.env.port,err=>{
     err?console.log(err):console.log(`you did it ${process.env.port}`)
 })
+   
